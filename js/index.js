@@ -11,7 +11,7 @@ function updateSubtotal(product) {
   let subtotalItem = product.querySelector('.subtotal span')
   subtotalItem.innerText = subtotal
   
-  
+  return subtotal
 
 }
 
@@ -23,13 +23,21 @@ function calculateAll() {
 
   // ITERATION 2
   let loopin = document.querySelectorAll('.product');
-  let products = loopin.forEach(e=>{
-    updateSubtotal(e)
+  let counter =0;
+  loopin.forEach(e=>{
+        updateSubtotal(e);
+        counter+= updateSubtotal(e)
   })
-  
+
+  let totalItem = document.querySelector('#total-value span')
+
+totalItem.innerText = counter  
 
   // ITERATION 3
-  //... your code goes here
+  
+  
+  
+  
 }
 
 // ITERATION 4
