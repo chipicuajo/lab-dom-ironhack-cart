@@ -17,12 +17,16 @@ function updateSubtotal(product) {
 
 function calculateAll() {
   
-  const singleProduct = document.querySelector('.product');
-  updateSubtotal(singleProduct);
+  // const singleProduct = document.querySelector('.product');
+  // updateSubtotal(singleProduct);
   // end of test
 
   // ITERATION 2
-  //... your code goes here
+  let loopin = document.querySelectorAll('.product');
+  let products = loopin.forEach(e=>{
+    updateSubtotal(e)
+  })
+  
 
   // ITERATION 3
   //... your code goes here
